@@ -2,7 +2,7 @@ pipeline {
   agent any  
   triggers { pollSCM('*/5 * * * 1-5') }
   stages {
-    stage (initial){
+    stage ('initial'){
 		steps {
 			echo "My branch 1 is: ${env.BRANCH_NAME}"
 		}
