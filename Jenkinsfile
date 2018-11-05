@@ -2,10 +2,7 @@ pipeline {
   agent any  
   triggers { pollSCM('*/5 * * * 1-5') }
   stages {
-    stage ('initial'){
-		steps {
-			echo "My branch 1 is: ${env.BRANCH_NAME}"
-		}
+    stage ('initial'){		
 		when {
 			expression {
 			  return env.BRANCH_NAME.equals("master")
